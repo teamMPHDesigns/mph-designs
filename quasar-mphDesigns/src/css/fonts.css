@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'customfont';
+  src: url('./fonts/customfont.woff') format('truetype');
+}
+@font-face {
+  font-family: 'Rustic';
+  src: url('https://fonts.gstatic.com/s/rustic/v10/9Btq3DFGjehvIe8e.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
