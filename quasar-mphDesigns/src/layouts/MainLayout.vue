@@ -12,10 +12,10 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          MPH Designs
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <q-btn class="bg-brown-10">BookFace</q-btn>
       </q-toolbar>
     </q-header>
 
