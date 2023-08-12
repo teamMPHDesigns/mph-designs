@@ -18,7 +18,7 @@
           <q-btn icon="fab fa-pinterest" :label=" $q.screen.gt.sm ? 'Pinteresst' : ''" class="bg-brown-10 q-ma-sm"></q-btn>
           <q-btn icon="fab fa-etsy" :label=" $q.screen.gt.sm ? 'Etsy' : ''" class="bg-brown-10 q-ma-sm"></q-btn>
           <q-btn icon="fab fa-instagram" :label=" $q.screen.gt.sm ? 'Instagram' : ''" class="bg-brown-10 q-ma-sm"></q-btn>
-          <q-btn icon="fab fa-instagram" :label=" $q.screen.gt.sm ? 'Email' : ''" class="q-ma-sm bg-light-blue-10" target="_blank" href="teammphdesigns@gmail.com"></q-btn>
+          <q-btn icon="fas fa-mail-bulk" :label=" $q.screen.gt.sm ? 'Email' : ''" class="q-ma-sm bg-light-blue-10" target="_blank" href="teammphdesigns@gmail.com"></q-btn>
         </div>
 
       </div>
