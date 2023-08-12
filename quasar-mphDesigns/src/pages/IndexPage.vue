@@ -3,7 +3,6 @@
     <q-card-section>
       <q-carousel
       v-model="slide"
-      vertical
       transition-prev="slide-down"
       transition-next="slide-up"
       swipeable
@@ -11,7 +10,7 @@
       navigation
       arrows
       class="text-white rounded-borders bg-brown-8"
-      style="height:fit-content;"
+      style="height:60vh;"
     >
       <q-carousel-slide name="home">
         <q-card class="bg-brown row justify-center">
@@ -19,7 +18,7 @@
           </div>
           <q-card-section style="height: 50vh; width: 40vw;">
             <q-img
-              src="~src/assets/blueHouseHome.jpeg"
+              src="~src/assets/home1.jpeg"
               class="rounded-borders"
               :ratio="16/9"
             >
@@ -35,26 +34,50 @@
         </div>
       </q-carousel-slide>
 
-      <q-carousel-slide name="tv" class="column no-wrap flex-center">
-        <q-icon name="live_tv" size="56px" />
-        <div class="q-mt-md text-center">
-          squa
+      <q-carousel-slide name="home2">
+        <q-card class="bg-brown row justify-center">
+          <div class="full-width transparent  text-center round-borders" >
+          </div>
+          <q-card-section style="height: 50vh; width: 40vw;">
+            <q-img
+              src="~src/assets/home2.jpeg"
+              class="rounded-borders"
+              :ratio="16/9"
+            >
+            </q-img>
+          </q-card-section>
+        </q-card>
+
+      <div class="q-mt-xs text-center">
+          wibbly wobbly the description
+        </div>
+        <div class="q-mt-xs text-center">
+          Price abouts $tree.50
         </div>
       </q-carousel-slide>
 
-      <q-carousel-slide name="layers" class="column no-wrap flex-center">
-        <q-icon name="layers" size="56px" />
-        <div class="q-mt-md text-center">
-          squa
+      <q-carousel-slide name="home3">
+        <q-card class="bg-brown row justify-center">
+          <div class="full-width transparent  text-center round-borders" >
+          </div>
+          <q-card-section style="height: 50vh; width: 40vw;">
+            <q-img
+              src="~src/assets/home3.jpeg"
+              class="rounded-borders"
+              :ratio="16/9"
+            >
+            </q-img>
+          </q-card-section>
+        </q-card>
+
+      <div class="q-mt-xs text-center">
+          wibbly wobbly the description
+        </div>
+        <div class="q-mt-xs text-center">
+          Price abouts $tree.50
         </div>
       </q-carousel-slide>
 
-      <q-carousel-slide name="map" class="column no-wrap flex-center">
-        <q-icon name="terrain" size="56px" />
-        <div class="q-mt-md text-center">
-          squa
-        </div>
-      </q-carousel-slide>
     </q-carousel>
     </q-card-section>
 
