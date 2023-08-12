@@ -1,116 +1,48 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
+    <q-header elevated class="bg-blue">
+      <div class="row text-h6 q-ma-sm justify-center">
         <q-btn
           flat
           dense
           round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
+          icon="fas fa-pencil-ruler"
         />
 
-        <q-toolbar-title>
-          MPH Designs
-        </q-toolbar-title>
+        <q-card flat class="full-width row bg-brown-8 justify-center q-ma-sm rounded-borders col-12">
+          <div class="full-width row transparent justify-center text-center round-borders" >
+              <q-card-section class="row col-6 q-mb-sm bg-brown-6 rounded-borders">
+                <div class="bg-brown-10 col-12 text-h4 text-white" style="border-radius: 20px 20px 0 0; border-top: 5px solid rgb(139, 115, 85);">MPH Designs</div>
+                <q-btn class="bg-brown-10 col-12 text-subtitle2 text-white" style="border-radius: 0 0 20px 20px; border-bottom: 5px solid  rgb(139, 115, 85);">210-560-0146</q-btn>
+              </q-card-section>
+          </div>
+        </q-card>
 
-        <q-btn class="bg-brown-10">BookFace</q-btn>
-      </q-toolbar>
+        <div class="col-auto row justify-center">
+          <q-btn icon="fab fa-facebook" label="Facebook" class="bg-brown-10 q-ma-sm"></q-btn>
+          <q-btn icon="fab fa-pintrest" label="Pintrest" class="bg-brown-10 q-ma-sm"></q-btn>
+          <q-btn icon="fab fa-etsy" label="Etsy" class="bg-brown-10 q-ma-sm"></q-btn>
+          <q-btn icon="fab fa-instagram" label="Instagram" class="bg-brown-10 q-ma-sm"></q-btn>
+          <q-btn icon="fab fa-instagram" label="Email" class="q-ma-sm bg-light-blue-10" target="_blank" href="teammphdesigns@gmail.com"></q-btn>
+        </div>
+
+      </div>
     </q-header>
-
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-    >
-      <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
-
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
-    </q-drawer>
 
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <q-footer>
+      <div>Come see at our next event on August 20th</div>
+    </q-footer>
   </q-layout>
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
-
-const linksList = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
-]
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'MainLayout',
-
-  components: {
-    EssentialLink
-  },
-
-  setup () {
-    const leftDrawerOpen = ref(false)
-
-    return {
-      essentialLinks: linksList,
-      leftDrawerOpen,
-      toggleLeftDrawer () {
-        leftDrawerOpen.value = !leftDrawerOpen.value
-      }
-    }
-  }
 })
 </script>

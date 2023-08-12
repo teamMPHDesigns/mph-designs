@@ -1,14 +1,5 @@
 <template>
-  <q-card style="height: 100%; width: 100%; outline: 5px solid lightblue;" class="bg-brown-1 q-pa-sm">
-    <q-card-section class="full-width row transparent justify-center text-center round-borders" >
-          <div class="col-12 row bg-brown-6 rounded-borders">
-            <div class="bg-brown-10 col-12 text-h4 text-white" style="border-radius: 20px 20px 0 0; border-top: 5px solid rgb(139, 115, 85);">MPH Designs</div>
-            <q-btn class="bg-brown-10 col-12 text-subtitle2 text-white" style="border-radius: 0 0 20px 20px; border-bottom: 5px solid  rgb(139, 115, 85);">210-210-210</q-btn>
-          </div>
-    </q-card-section>
-    <q-card-section class="justify-center col-12 row">
-      <q-btn class="text-black text-center text-subtitle1 bg-light-blue text-bold">MPHDesignTeams@gmail.com</q-btn>
-    </q-card-section>
+  <q-card style="height: 100%; width: 100%;" class="bg-brown-4 q-pa-sm">
     <q-card-section>
       <q-carousel
       v-model="slide"
@@ -20,14 +11,22 @@
       navigation
       arrows
       class="text-white rounded-borders bg-brown-8"
-      style="height: 62vh;"
+      style="height:fit-content;"
     >
       <q-carousel-slide name="home">
-        <q-img
-        src="~src/assets/blueHouseHome.jpeg"
-        class="rounded-borders"
-      >
-      </q-img>
+        <q-card class="bg-brown row justify-center">
+          <div class="full-width transparent  text-center round-borders" >
+          </div>
+          <q-card-section style="height: 50vh; width: 40vw;">
+            <q-img
+              src="~src/assets/blueHouseHome.jpeg"
+              class="rounded-borders"
+              :ratio="16/9"
+            >
+            </q-img>
+          </q-card-section>
+        </q-card>
+
       <div class="q-mt-xs text-center">
           wibbly wobbly the description
         </div>
